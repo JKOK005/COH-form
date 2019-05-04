@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/daterangepicker/daterangepicker.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container-contact100">
@@ -32,7 +33,7 @@
 			<form class="contact100-form validate-form">
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span>Given name:</span>
-					<input class="input100" type="text" name="name" placeholder="Enter full name">
+					<input class="input100" type="text" name="name" placeholder="Enter name">
 					<span class="focus-input100"></span>
 				</div>
 
@@ -44,13 +45,21 @@
 
 				<div class="wrap-input100 validate-input" data-validate = "Please select gender">
 					<span>Gender:</span>
-					<input class="input100" type="text" name="gender" placeholder="Select gender">
+					<div class="btn-group btn-toggle gender input100"> 
+					  <input type="button" name="gender" class="btn btn-primary" value="Male">
+					  <input type="button" name="gender" class="btn btn-default" value="Female">
+					</div>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Please select age group">
 					<span>Age group:</span>
-					<input class="input100" name="age_group" placeholder="Select age group"></input>
+					<select class="input100 browser-default custom-select">
+						<option selected>Select age group</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -131,6 +140,8 @@
 	<script src="{{url_for('static', filename='vendor/countdowntime/countdowntime.js')}}"></script>
 	<script src="{{url_for('static', filename='js/map-custom.js')}}"></script>
 	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 	<script>
 	  window.dataLayer = window.dataLayer || [];

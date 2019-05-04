@@ -283,7 +283,7 @@ iframe {
   display: block;
   width: 100%;
   background: transparent;
-  padding: 0 5px;
+  padding: 6px;
 }
 
 .focus-input100 {
@@ -316,7 +316,7 @@ iframe {
 
 /*---------------------------------------------*/
 input.input100 {
-  height: 45px;
+  height: 50px;
 }
 
 
