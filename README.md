@@ -1,2 +1,2 @@
-# COH-form
-Celebration of hope form
+Flask application for rendering celebration of hope user feedback form
+
