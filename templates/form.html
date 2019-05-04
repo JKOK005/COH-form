@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V15</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.icon')}}"/>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/daterangepicker/daterangepicker.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<div class="contact100-form-title" style="background-image: url(images/bg-01.jpg);">
+				<span class="contact100-form-title-1">
+					Celebration Of Hope
+				</span>
+
+				<span class="contact100-form-title-2">
+					Response Form
+				</span>
+			</div>
+
+			<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span>Given name:</span>
+					<input class="input100" type="text" name="name" placeholder="Enter full name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Surname is required">
+					<span>Surname:</span>
+					<input class="input100" type="text" name="surname" placeholder="Enter surname">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Please select gender">
+					<span>Gender:</span>
+					<input class="input100" type="text" name="gender" placeholder="Select gender">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select age group">
+					<span>Age group:</span>
+					<textarea class="input100" name="message" placeholder="Select age group"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please enter phone number">
+					<span>Phone number:</span>
+					<textarea class="input100" name="message" placeholder="Enter phone number"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please enter email address">
+					<span>Email address:</span>
+					<textarea class="input100" name="message" placeholder="Enter email address"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Decision made:</span>
+					<textarea class="input100" name="message" placeholder="Select decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Postal code:</span>
+					<textarea class="input100" name="message" placeholder="Enter decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Which rally did you attend:</span>
+					<textarea class="input100" name="message" placeholder="Enter decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Preferred language:</span>
+					<textarea class="input100" name="message" placeholder="Enter decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Name of person who invited you:</span>
+					<textarea class="input100" name="message" placeholder="Enter decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Church of person who invited you:</span>
+					<textarea class="input100" name="message" placeholder="Enter decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
+					<span>Comments:</span>
+					<textarea class="input100" name="message" placeholder="Enter decision made"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+	<script src="{{url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/animsition/js/animsition.min.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/select2/select2.min.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/daterangepicker/moment.min.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/daterangepicker/daterangepicker.js')}}"></script>
+	<script src="{{url_for('static', filename='vendor/countdowntime/countdowntime.js')}}"></script>
+	<script src="{{url_for('static', filename='js/map-custom.js')}}"></script>
+	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>
