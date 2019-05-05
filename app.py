@@ -18,8 +18,9 @@ def submit_form():
 		if resp_code == req.codes.ok:
 			return render_template('post_submission.html')
 		else:
-			raise Exception("Error with code {0}".format(resp_code))
-	except Exeption as ex:
+			raise Exception("Form submission failed with code {0}".format(resp_code))
+	except Exception as ex:
+		print(ex)
 		return render_template('post_submission.html')
 
 @app.route('/heart-beat')
