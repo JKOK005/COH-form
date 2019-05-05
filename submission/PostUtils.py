@@ -1,6 +1,6 @@
 import requests
 import os
-from ..settings import *
+from settings import *
 
 class PostUtils(object):
 	@classmethod
