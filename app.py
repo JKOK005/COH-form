@@ -12,11 +12,14 @@ def render_form_template():
 
 @app.route('/form-submission', methods=["POST"])
 def submit_form():
-	form_data = request.json
-	resp = PostUtils.dispatch(form_data=form_data)
-	if resp == req.codes.ok:
-		return render_template('post_submission.html')
-	else:
+	try:
+		form_data = request.json
+		resp_code = PostUtils.dispatch(form_data=form_data)
+		if resp_code == req.codes.ok:
+			return render_template('post_submission.html')
+		else:
+			raise Exception("Error with code {0}".format(resp_code))
+	except Exeption as ex:
 		return render_template('post_submission.html')
 
 @app.route('/heart-beat')
