@@ -5,7 +5,7 @@ from settings import *
 class PostUtils(object):
 	@classmethod
 	def dispatch(cls, form_data):
-		# Dispatch form informatin over to server implementation
+		# Dispatch form information over to server implementation
 		return requests.codes.ok 
 
 	@classmethod
