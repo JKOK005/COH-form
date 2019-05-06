@@ -40,7 +40,6 @@ class PostUtils(object):
 	@classmethod
 	def churches(cls):
 		# API calls to server to get church lists
-		# Thereafter, caches information in redis
 		headers = {
 			"APIKey" 		: settings.COH_API_KEY,
 			"Accept" 		: "application/json", 
