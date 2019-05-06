@@ -16,16 +16,16 @@ def submit_form():
 		form_data = request.form
 		resp_code = PostUtils.dispatch(form_data=form_data)
 		if resp_code == req.codes.ok:
-			return url_for("post_form_submission", is_success=True, code=resp_code)
+			return url_for("post_form_submission", is_success=1, code=resp_code)
 		else:
 			raise Exception("Form submission failed with code {0}".format(resp_code))
 	except Exception as ex:
 		print(ex)
-		return url_for("post_form_submission", is_success=False, code=req.codes.bad_request)
+		return url_for("post_form_submission", is_success=0, code=req.codes.bad_request)
 
 @app.route('/form-status')
 def post_form_submission():
-	is_success = request.args["is_success"]
+	is_success = int(request.args["is_success"])
 	code = request.args["code"]
 	return render_template('post_submission.html', is_success=is_success, code=code)
 
