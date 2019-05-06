@@ -54,10 +54,14 @@
 			<div class="wrap-input100 validate-input" data-validate = "Please select age group">
 				<span>Age group:</span>
 				<select class="input100 browser-default custom-select" name="age_group">
-					<option selected>Select age group</option>
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
+					<option value="A" selected>6 years old and below</option>
+					<option value="B">7-12 years</option>
+					<option value="C">13-16 years</option>
+					<option value="D">17-25 years</option>
+					<option value="E">26-35 years</option>
+					<option value="F">36-49 years</option>
+					<option value="G">50-64 years</option>
+					<option value="H">65 years old and above</option>
 				</select>
 				<span class="focus-input100"></span>
 			</div>
@@ -65,10 +69,11 @@
 			<div class="wrap-input100 validate-input" data-validate = "Please select decision made">
 				<span>Decision made:</span>
 				<select class="input100 browser-default custom-select" name="decision_made">
-					<option selected>Select decision made</option>
-					<option value="1">decision 1</option>
-					<option value="2">decision 2</option>
-					<option value="3">decision 3</option>
+					<option value="A" selected>I just prayed to receive Jesus Christ</option>
+					<option value="B">I just rededicated my life to Jesus Christ</option>
+					<option value="C">I am interested to find out more about Jesus Christ</option>
+					<option value="D">I would like to join a Church</option>
+					<option value="E">Others</option>
 				</select>
 				<span class="focus-input100"></span>
 			</div>
@@ -76,10 +81,13 @@
 			<div class="wrap-input100 validate-input" data-validate = "Please select rally attended">
 				<span>Which rally did you attend:</span>
 				<select class="input100 browser-default custom-select" name="rally_attended">
-					<option selected>Select rally</option>
-					<option value="1">rally 1</option>
-					<option value="2">rally 2</option>
-					<option value="3">rally 3</option>
+					<option value="A" selected>Friday, 17 May (7.30pm English)</option>
+					<option value="B">Saturday, 18 May (10.30am Children &#38; Families)</option>
+					<option value="C">Saturday, 18 May (7.30pm Chinese)</option>
+					<option value="D">Saturday, 18 May (7.30pm Tamil)</option>
+					<option value="E">Sunday, 19 May (10.30am Filipino/English)</option>
+					<option value="F">Sunday, 19 May (2pm Hindi)</option>
+					<option value="G">Sunday, 19 May (7.30pm English)</option>
 				</select>
 				<span class="focus-input100"></span>
 			</div>
@@ -87,10 +95,13 @@
 			<div class="wrap-input100 validate-input" data-validate = "Please select preferred language">
 				<span>Preferred language:</span>
 				<select class="input100 browser-default custom-select" name="preferred_language">
-					<option selected>Select language</option>
-					<option value="1">language 1</option>
-					<option value="2">language 2</option>
-					<option value="3">language 3</option>
+					<option value="1" selected>English</option>
+					<option value="2">Mandarin &#21326;&#35821;</option>
+					<option value="3">Tamil, Telugu, Kannada, Malayalam</option>
+					<option value="3">Hindi, Bengali, Gujarati, Punjabi, Urdu..</option>
+					<option value="3">Tagalog</option>
+					<option value="3">Bahasa Indonesian</option>
+					<option value="3">Sunday School (Children)</option>
 				</select>
 				<span class="focus-input100"></span>
 			</div>
@@ -104,10 +115,10 @@
 			<div class="wrap-input100 validate-input">
 				<span>Church of person who invited you (if applicable):</span>
 				<select class="input100 browser-default custom-select" name="church_of_person_who_invited">
-					<option selected>Select church</option>
-					<option value="1">N.A.</option>
-					<option value="2">Church 1</option>
-					<option value="3">Church 2</option>
+					<option selected>N.A.</option>
+					{% for each_church in churches %}
+						<option value="{{each_church}}">{{each_church}}</option>
+					{% endfor %}
 				</select>
 				<span class="focus-input100"></span>
 			</div>

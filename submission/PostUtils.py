@@ -1,17 +1,16 @@
 import requests
 import os
 import settings
-import logging
 import json
 
 class PostUtils(object):
-	logger = logging.getLogger("PostUtils")
-
 	@classmethod
 	def dispatch(cls, form_data):
 		# Dispatch form information over to server implementation
 		headers = {
-			"APIKey" : settings.COH_API_KEY
+			"APIKey" 		: settings.COH_API_KEY,
+			"Accept" 		: "application/json", 
+			"Content-Type"	: "application/json"
 		}
 
 		body = {
@@ -36,12 +35,19 @@ class PostUtils(object):
 		}
 
 		resp = requests.post(settings.COH_FORM_SUBMIT, data=json.dumps(body), headers=headers)
-		cls.logger.debug("POST with headers: {0}, data {1}".format(body, headers))
-		cls.logger.info("Submitted with response: {0}".format(resp.content))
 		return resp.status_code
 
 	@classmethod
 	def churches(cls):
 		# API calls to server to get church lists
 		# Thereafter, caches information in redis
-		pass
+		headers = {
+			"APIKey" 		: settings.COH_API_KEY,
+			"Accept" 		: "application/json", 
+			"Content-Type"	: "application/json"
+		}
+
+		resp = requests.get(settings.COH_CHURCHES, headers=headers)
+		church_details = resp.json()
+		church_name_list = [each_church["Name"] for each_church in church_details]
+		return church_name_list

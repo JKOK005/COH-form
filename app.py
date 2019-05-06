@@ -8,7 +8,8 @@ app = Flask(__name__)
 @app.route('/', methods=["GET"])
 def render_form_template():
 	app.logger.debug("Rendering main form")
-	return render_template('form.html')
+	churches = PostUtils.churches()
+	return render_template('form.html', churches=churches)
 
 @app.route('/form-submission', methods=["POST"])
 def submit_form():
